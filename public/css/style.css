@@ -1,0 +1,434 @@
+/* =====================================================
+   RESET DE BASE
+   Supprime les marges/paddings par dÃ©faut
+   et facilite les calculs de tailles
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   STYLE GLOBAL
+===================================================== */
+body {
+    font-family: 'Arial', sans-serif; /* Etelka n'Ã©tant pas standard, on garde Arial */
+    background-color: #f5f5f5;
+    padding: 20px;
+    color: #000000;
+}
+
+/* =====================================================
+   CONTENEUR PRINCIPAL
+   Centre le contenu et limite la largeur
+===================================================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.visual-preview {
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px dashed #0095DA;
+}
+
+.coffret-container img {
+    max-width: 250px;
+    height: auto;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+#priseCountLabel {
+    font-weight: bold;
+    color: #0095DA;
+}
+
+/* =====================================================
+   EN-TÃŠTE
+===================================================== */
+h1 {
+    color: #0095DA; /* Bals Blue */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.email-info {
+    color: #B3B3B3; /* Light Grey */
+    margin-bottom: 30px;
+}
+
+.email-info strong {
+    color: #ED1C24; /* Bals Red */
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #0095DA; /* Accent Bals Blue */
+}
+
+.section h2 {
+    color: #0095DA; /* Bals Blue */
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   FORMULAIRE
+===================================================== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Champs de formulaire */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #B3B3B3;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0095DA; /* Bals Blue au focus */
+}
+
+/* Zone de texte ajustable verticalement */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Style pour les champs file */
+input[type="file"] {
+    padding: 8px;
+    cursor: pointer;
+}
+
+small {
+    color: #B3B3B3;
+    font-size: 12px;
+}
+
+/* =====================================================
+   CASES Ã€ COCHER / RADIOS
+===================================================== */
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #000000;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #0095DA; /* Bals Blue pour les checkboxes */
+}
+
+/* =====================================================
+   TABLEAU
+===================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #B3B3B3;
+    text-align: left;
+}
+
+/* En-tÃªte du tableau */
+th {
+    background-color: #0095DA; /* Bals Blue */
+    color: white;
+    font-weight: bold;
+}
+
+/* Champs Ã  l'intÃ©rieur du tableau */
+td input,
+td select {
+    width: 100%;
+    border: 1px solid #B3B3B3;
+}
+
+/* =====================================================
+   BOUTONS
+===================================================== */
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.submit-btn,
+.copy-btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bouton envoyer - Bals Blue */
+.submit-btn {
+    background-color: #0095DA; /* Bals Blue */
+}
+
+.submit-btn:hover {
+    background-color: #007AB8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 149, 218, 0.3);
+}
+
+/* Bouton copier - Bals Red */
+.copy-btn {
+    background-color: #ED1C24; /* Bals Red */
+}
+
+.copy-btn:hover {
+    background-color: #C91A20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(237, 28, 36, 0.3);
+}
+
+/* =====================================================
+   RÃ‰SUMÃ‰
+===================================================== */
+.summary {
+    background-color: #E6F5FC; /* Bleu trÃ¨s clair */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0095DA;
+}
+
+.summary h3 {
+    color: #0095DA; /* Bals Blue */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#summaryText {
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   ZONE DE PRÃ‰VISUALISATION EMAIL
+===================================================== */
+.preview-zone {
+    background-color: #F9F9F9;
+    border: 2px solid #0095DA; /* Bals Blue */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.preview-zone h3 {
+    color: #0095DA; /* Bals Blue */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#emailPreview {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #B3B3B3;
+    color: #000000;
+}
+
+/* Scrollbar personnalisÃ©e */
+#emailPreview::-webkit-scrollbar {
+    width: 8px;
+}
+
+#emailPreview::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#emailPreview::-webkit-scrollbar-thumb {
+    background: #0095DA;
+    border-radius: 4px;
+}
+
+#emailPreview::-webkit-scrollbar-thumb:hover {
+    background: #007AB8;
+}
+
+/* =====================================================
+   LISTE DES FICHIERS
+===================================================== */
+#listeFichiers {
+    margin-top: 15px;
+}
+
+#listeFichiers > div {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #0095DA;
+}
+
+#listeFichiers strong {
+    color: #0095DA;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#listeFichiers .file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: white;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #B3B3B3;
+}
+
+#listeFichiers .file-item span {
+    color: #000000;
+}
+
+#listeFichiers .file-item small {
+    color: #B3B3B3;
+}
+
+#listeFichiers button {
+    background-color: #ED1C24; /* Bals Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#listeFichiers button:hover {
+    background-color: #C91A20;
+}
+
+/* =====================================================
+   RESPONSIVE â€“ TABLETTE (â‰¤ 768px)
+===================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE â€“ MOBILE (â‰¤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* Boutons en colonne */
+    .button-group {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .copy-btn {
+        width: 100%;
+    }
+
+    /* Texte plus lisible */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    /* Tableau scrollable horizontalement */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
