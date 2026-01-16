@@ -1,6 +1,6 @@
 /* =====================================================
    RESET DE BASE
-   Supprime les marges/paddings par dÃ©faut
+   Supprime les marges/paddings par défaut
    et facilite les calculs de tailles
 ===================================================== */
 * {
@@ -10,26 +10,28 @@
 }
 
 /* =====================================================
-   STYLE GLOBAL
+   STYLE GLOBAL - VERSION PLEINE PAGE
 ===================================================== */
 body {
-    font-family: 'Arial', sans-serif; /* Etelka n'Ã©tant pas standard, on garde Arial */
+    font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     color: #000000;
+    min-height: 100vh;
 }
 
 /* =====================================================
-   CONTENEUR PRINCIPAL
-   Centre le contenu et limite la largeur
+   CONTENEUR PRINCIPAL - PLEINE PAGE
+   Prend toute la largeur avec marges minimales
 ===================================================== */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    min-height: 100vh;
 }
 
 .visual-preview {
@@ -51,7 +53,7 @@ body {
 }
 
 /* =====================================================
-   EN-TÃŠTE
+   EN-TÊTE
 ===================================================== */
 h1 {
     color: #0095DA; /* Bals Blue */
@@ -145,7 +147,7 @@ small {
 }
 
 /* =====================================================
-   CASES Ã€ COCHER / RADIOS
+   CASES À COCHER / RADIOS
 ===================================================== */
 .checkbox-group {
     display: flex;
@@ -184,14 +186,14 @@ th, td {
     text-align: left;
 }
 
-/* En-tÃªte du tableau */
+/* En-tête du tableau */
 th {
     background-color: #0095DA; /* Bals Blue */
     color: white;
     font-weight: bold;
 }
 
-/* Champs Ã  l'intÃ©rieur du tableau */
+/* Champs à l'intérieur du tableau */
 td input,
 td select {
     width: 100%;
@@ -245,10 +247,10 @@ td select {
 }
 
 /* =====================================================
-   RÃ‰SUMÃ‰
+   RÉSUMÉ
 ===================================================== */
 .summary {
-    background-color: #E6F5FC; /* Bleu trÃ¨s clair */
+    background-color: #E6F5FC; /* Bleu très clair */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -267,7 +269,7 @@ td select {
 }
 
 /* =====================================================
-   ZONE DE PRÃ‰VISUALISATION EMAIL
+   ZONE DE PRÉVISUALISATION EMAIL
 ===================================================== */
 .preview-zone {
     background-color: #F9F9F9;
@@ -296,7 +298,7 @@ td select {
     color: #000000;
 }
 
-/* Scrollbar personnalisÃ©e */
+/* Scrollbar personnalisée */
 #emailPreview::-webkit-scrollbar {
     width: 8px;
 }
@@ -371,15 +373,11 @@ td select {
 }
 
 /* =====================================================
-   RESPONSIVE â€“ TABLETTE (â‰¤ 768px)
+   RESPONSIVE – TABLETTE (≤ 768px)
 ===================================================== */
 @media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-
     .container {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     h1 {
@@ -392,16 +390,11 @@ td select {
 }
 
 /* =====================================================
-   RESPONSIVE â€“ MOBILE (â‰¤ 480px)
+   RESPONSIVE – MOBILE (≤ 480px)
 ===================================================== */
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
     .container {
-        padding: 15px;
-        border-radius: 0;
+        padding: 20px 15px;
     }
 
     h1 {
